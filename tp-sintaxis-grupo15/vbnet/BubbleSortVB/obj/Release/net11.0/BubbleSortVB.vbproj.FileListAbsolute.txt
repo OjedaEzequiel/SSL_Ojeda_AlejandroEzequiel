@@ -1,0 +1,14 @@
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\bin\Release\net11.0\BubbleSortVB.exe
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\bin\Release\net11.0\BubbleSortVB.deps.json
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\bin\Release\net11.0\BubbleSortVB.runtimeconfig.json
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\bin\Release\net11.0\BubbleSortVB.dll
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\bin\Release\net11.0\BubbleSortVB.pdb
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\BubbleSortVB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\BubbleSortVB.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\BubbleSortVB.AssemblyInfo.vb
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\BubbleSortVB.vbproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\BubbleSortVB.dll
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\refint\BubbleSortVB.dll
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\BubbleSortVB.pdb
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\BubbleSortVB.genruntimeconfig.cache
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\BubbleSortVB\obj\Release\net11.0\ref\BubbleSortVB.dll

@@ -1,0 +1,14 @@
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\bin\Release\net11.0\QuickSortVB.exe
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\bin\Release\net11.0\QuickSortVB.deps.json
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\bin\Release\net11.0\QuickSortVB.runtimeconfig.json
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\bin\Release\net11.0\QuickSortVB.dll
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\bin\Release\net11.0\QuickSortVB.pdb
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\QuickSortVB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\QuickSortVB.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\QuickSortVB.AssemblyInfo.vb
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\QuickSortVB.vbproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\QuickSortVB.dll
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\refint\QuickSortVB.dll
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\QuickSortVB.pdb
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\QuickSortVB.genruntimeconfig.cache
+C:\Users\USUARIO\Desktop\Cursada 2026\Sintaxis y Semántica de los Lenguajes\tp-sintaxis-grupo15\vbnet\QuickSortVB\obj\Release\net11.0\ref\QuickSortVB.dll
