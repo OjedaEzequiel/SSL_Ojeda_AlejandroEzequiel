@@ -61,25 +61,35 @@ Module BubbleSortBenchmark
     'repeticiones: cantidad de veces que se ejecutará Bubble Sort
     'Devuelve un Double, que representa el tiempo promedio en milisegundos.
     'Osea Mide cuánto tarda Bubble Sort.
-    Function MedirBubbleSort(tamanio As Integer, repeticiones As Integer) As Double
-        Dim tiempoTotal As Double = 0
+Function MedirBubbleSort(tamanio As Integer, repeticiones As Integer) As Double
+    Dim tiempoTotal As Double = 0
 
-        For r As Integer = 1 To repeticiones
-            Dim datos As Integer() = CType(GenerarDatos(tamanio).Clone(), Integer())
+    ' Repite la prueba varias veces para obtener un promedio.
+    For r As Integer = 1 To repeticiones
 
-            Dim reloj As Stopwatch = Stopwatch.StartNew()
-            BubbleSort(datos)
-            reloj.Stop()
+        ' Genera un arreglo nuevo con la cantidad de elementos indicada.
+        Dim datos As Integer() = CType(GenerarDatos(tamanio).Clone(), Integer())
 
-            If Not EstaOrdenado(datos) Then
-                Throw New Exception("El arreglo no quedó ordenado.")
-            End If
+        ' Inicia el cronómetro justo antes de ordenar.
+        Dim reloj As Stopwatch = Stopwatch.StartNew()
 
-            tiempoTotal += reloj.Elapsed.TotalMilliseconds
-        Next
+        BubbleSort(datos)
 
-        Return tiempoTotal / repeticiones
-    End Function
+        ' Detiene la medición cuando termina el ordenamiento.
+        reloj.Stop()
+
+        ' Comprueba que el algoritmo haya ordenado correctamente el arreglo.
+        If Not EstaOrdenado(datos) Then
+            Throw New Exception("El arreglo no quedó ordenado.")
+        End If
+
+        ' Suma el tiempo de esta ejecución al tiempo total.
+        tiempoTotal += reloj.Elapsed.TotalMilliseconds
+    Next
+
+    ' Devuelve el tiempo promedio de todas las ejecuciones.
+    Return tiempoTotal / repeticiones
+End Function
 
     Sub Main()
         Console.WriteLine("Benchmark Bubble Sort - VB.NET")

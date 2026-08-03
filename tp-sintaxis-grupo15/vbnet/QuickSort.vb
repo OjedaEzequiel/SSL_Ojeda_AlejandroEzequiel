@@ -75,25 +75,36 @@ Module QuickSortBenchmark
     ' Ejecuta Quick Sort varias veces sobre arreglos del tamaño indicado.
     ' Mide el tiempo de cada ejecución, verifica el resultado
     ' y devuelve el tiempo promedio en milisegundos.
-    Function MedirQuickSort(tamanio As Integer, repeticiones As Integer) As Double
-        Dim tiempoTotal As Double = 0
+Function MedirQuickSort(tamanio As Integer, repeticiones As Integer) As Double
+    Dim tiempoTotal As Double = 0
 
-        For r As Integer = 1 To repeticiones
-            Dim datos As Integer() = CType(GenerarDatos(tamanio).Clone(), Integer())
+    ' Repite la prueba varias veces para calcular un tiempo promedio.
+    For r As Integer = 1 To repeticiones
 
-            Dim reloj As Stopwatch = Stopwatch.StartNew()
-            QuickSort(datos, 0, datos.Length - 1)
-            reloj.Stop()
+        ' Genera un arreglo nuevo con la cantidad de elementos indicada.
+        Dim datos As Integer() = CType(GenerarDatos(tamanio).Clone(), Integer())
 
-            If Not EstaOrdenado(datos) Then
-                Throw New Exception("El arreglo no quedó ordenado.")
-            End If
+        ' Inicia el cronómetro justo antes de comenzar el ordenamiento.
+        Dim reloj As Stopwatch = Stopwatch.StartNew()
 
-            tiempoTotal += reloj.Elapsed.TotalMilliseconds
-        Next
+        ' Ordena todo el arreglo, desde la primera hasta la última posición.
+        QuickSort(datos, 0, datos.Length - 1)
 
-        Return tiempoTotal / repeticiones
-    End Function
+        ' Detiene la medición cuando termina Quick Sort.
+        reloj.Stop()
+
+        ' Comprueba que el arreglo haya quedado correctamente ordenado.
+        If Not EstaOrdenado(datos) Then
+            Throw New Exception("El arreglo no quedó ordenado.")
+        End If
+
+        ' Suma el tiempo de esta ejecución al tiempo total.
+        tiempoTotal += reloj.Elapsed.TotalMilliseconds
+    Next
+
+    ' Devuelve el promedio de todas las mediciones.
+    Return tiempoTotal / repeticiones
+End Function
 
     Sub Main()
         Console.WriteLine("Benchmark Quick Sort - VB.NET")
