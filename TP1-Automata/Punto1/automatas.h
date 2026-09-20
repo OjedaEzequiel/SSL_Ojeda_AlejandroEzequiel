@@ -1,6 +1,6 @@
 #ifndef AUTOMATAS_H
 #define AUTOMATAS_H
-//Este archivo sirve para decirle a main.c qué funciones existen.
+
 int verificaDecimal(const char *cadena);
 int palabraEsDecimal(const char *cadena);
 

@@ -42,7 +42,7 @@ int palabraEsDecimal(const char *cadena)
 
 
 //verificacion del alfabeto
-int verificaDecimal(char *s)
+int verificaDecimal(const char *s)
 {
 	unsigned i;
 	for(i=0;s[i]!='\0';i++)

@@ -41,7 +41,7 @@ int palabraEsHexadecimal(const char *cadena)
 
 
 //verificacion del alfabeto
-int verificaHexadecimal(char *s)
+int verificaHexadecimal(const char *s)
 {
 	unsigned i;
 	for(i=0;s[i]!='\0';i++)

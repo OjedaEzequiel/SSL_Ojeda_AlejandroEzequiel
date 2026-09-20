@@ -41,7 +41,7 @@ int palabraEsOperacion(const char *cadena)
 
 
 //verificacion del alfabeto
-int verificaOperacion(char *s)
+int verificaOperacion(const char *s)
 {
 	unsigned i;
 	for(i=0;s[i]!='\0';i++)

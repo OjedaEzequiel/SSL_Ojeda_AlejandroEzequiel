@@ -21,7 +21,11 @@ int procesar(const char *palabra, int *cantDecimal, int *cantOctal, int *cantHex
 
 void ejecutarPunto1(void)
 {
-    char cadena[] = "25@12@8@077@07@0XAF@-14";
+    char cadena[100];
+
+    printf("Ingrese los numeros separados por @: ");
+    scanf("%99s", cadena);
+
     char palabra[100];
     int longitud = strlen(cadena);
     int j = 0;
@@ -53,5 +57,4 @@ void ejecutarPunto1(void)
     printf("Decimales: %d\n", cantDecimal);
     printf("Octales: %d\n", cantOctal);
     printf("Hexadecimales: %d\n", cantHexadecimal);
-
 }

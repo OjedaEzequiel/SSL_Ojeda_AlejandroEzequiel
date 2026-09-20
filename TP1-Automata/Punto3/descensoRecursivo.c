@@ -1,3 +1,4 @@
+#include "../Punto2/punto2.h"
 #include "descensoRecursivo.h"
 
 int numero(const char *cadena, int *pos) //Recorre la cadena y me devuelve el numero un numero(corte cuando se encuentra con +,-,* o \0 )
@@ -6,7 +7,8 @@ int numero(const char *cadena, int *pos) //Recorre la cadena y me devuelve el nu
 
     while (cadena[*pos] >= '0' && cadena[*pos] <= '9')
     {
-        valor = valor * 10 + (cadena[*pos] - '0');
+        int digito = caracterAEntero(cadena[*pos]); //Usamos caracterAEntero()Funcion del punto2
+        valor = valor * 10 + digito;
         (*pos)++;
     }
 

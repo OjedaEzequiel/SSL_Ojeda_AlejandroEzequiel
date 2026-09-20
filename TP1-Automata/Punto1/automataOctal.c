@@ -37,7 +37,7 @@ int palabraEsOctal(const char *cadena)
 
 
 //verificacion del alfabeto
-int verificaOctal(char *s)
+int verificaOctal(const char *s)
 {
 	unsigned i;
 	for(i=0;s[i]!='\0';i++)

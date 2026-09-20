@@ -13,7 +13,9 @@ int caracterAEntero(char caracter)
 
 void ejecutarPunto2()
 {
-    char caracter = '7';
+    char caracter;
+    printf("Ingrese un caracter numerico: ");
+    scanf(" %c", &caracter);
 
     int numero= caracterAEntero(caracter);
     if(numero ==-1){
