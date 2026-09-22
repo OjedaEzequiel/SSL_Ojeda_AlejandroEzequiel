@@ -5,22 +5,26 @@ int columnaOperacion(int c) //Devuelve el numero de columna que corresponde
 {
 	switch(c)
 	{
-		case '*':
-			return 1;
+		case '0':
+			return 0;
 		case '+':
 			return 2;
         case '-':
            return 3;
+        case '*':
+           return 4;
 		default:
-			return 0; //Devuelve o porque como "verificamos" que es una cadena valida ya es seguro que el caracter que resive es uno valido que pertenece a la primera fila. 
+			return 1; // Si no es 0 ni un operador, luego de verificar el alfabeto, sabemos que pertenece a [1-9]
 	}
 }
 int palabraEsOperacion(const char *cadena)
 {
     //Obs: declaramos la matriz como static para que se cargue una sola vez
-  static int tt[3][4] = {{1,2,2,2},
-				        {1,0,0,0},
-				        {2,2,2,2},
+  static int tt[4][5] = {
+	                    {2,1,3,3,3},
+				        {1,1,0,0,0},
+				        {3,3,0,0,0},
+						{3,3,3,3,3}
 					   };
    	int e = 0; //e=Estado, me dice el estado actual
 	unsigned int i = 0; 
@@ -33,7 +37,7 @@ int palabraEsOperacion(const char *cadena)
 		c = cadena[++i]; //avanzo al siguiente caracter
 	}
 
-	if (e == 1)  //Verifico que haya llegado al estado de aceptacion
+	if (e == 1 || e==2)  // Verifico que haya llegado a uno de los estados de aceptación
 		return 1;
 
 	return 0;

@@ -2,7 +2,7 @@
 #include "Punto1/punto1.h"
 #include "Punto2/punto2.h"
 #include "Punto3/punto3.h"
-#include <stdlib.h> //La implemento para poder hacer una limpieza de pantalla
+#include <stdlib.h> //  Implemento esta libreria para poder hacer una limpieza de pantalla
 
 int main()
 {
