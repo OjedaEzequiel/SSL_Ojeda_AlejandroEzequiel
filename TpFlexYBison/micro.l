@@ -1,8 +1,8 @@
 %{
 #include <stdio.h>
-#include "y.tab.h"
 #include <stdlib.h>
-
+#include <string.h>
+#include "y.tab.h"
 int hay_error_lexico = 0;
 %}
 
@@ -17,13 +17,16 @@ int hay_error_lexico = 0;
 "leer"                      { return LEER; }
 "escribir"                  { return ESCRIBIR; }
 
-[a-zA-Z][a-zA-Z0-9]*        { return ID; } 
-[0-9]+                      { return CONSTANTE; }
+
+[a-zA-Z][a-zA-Z0-9]*    { yylval.cadena = malloc(strlen(yytext) + 1); strcpy(yylval.cadena, yytext); return ID; }
+
+[0-9]+    { yylval.cadena = malloc(strlen(yytext) + 1); strcpy(yylval.cadena, yytext); return CONSTANTE; }
 
 ":="                        { return ASIGNACION; }
 "+"                         { return SUMA; }
 "-"                         { return RESTA; }
 ";"                         { return PUNTOYCOMA; }
+","                         { return COMA; }
 "("                         { return PARENIZQUIERDO; }
 ")"                         { return PARENDERECHO; }
 
