@@ -20,7 +20,10 @@ int hay_error_lexico = 0;
 
 [a-zA-Z][a-zA-Z0-9]*    { yylval.cadena = malloc(strlen(yytext) + 1); strcpy(yylval.cadena, yytext); return ID; }
 
-[0-9]+    { yylval.cadena = malloc(strlen(yytext) + 1); strcpy(yylval.cadena, yytext); return CONSTANTE; }
+[0-9]+ {
+    yylval.num = atoi(yytext);
+    return CONSTANTE;
+}
 
 ":="                        { return ASIGNACION; }
 "+"                         { return SUMA; }

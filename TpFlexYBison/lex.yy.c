@@ -688,51 +688,54 @@ YY_RULE_SETUP
 case 6:
 YY_RULE_SETUP
 #line 23 "micro.l"
-{ yylval.cadena = malloc(strlen(yytext) + 1); strcpy(yylval.cadena, yytext); return CONSTANTE; }
+{
+    yylval.num = atoi(yytext);
+    return CONSTANTE;
+}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 25 "micro.l"
+#line 28 "micro.l"
 { return ASIGNACION; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 26 "micro.l"
+#line 29 "micro.l"
 { return SUMA; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 27 "micro.l"
+#line 30 "micro.l"
 { return RESTA; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 28 "micro.l"
+#line 31 "micro.l"
 { return PUNTOYCOMA; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 29 "micro.l"
+#line 32 "micro.l"
 { return COMA; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 30 "micro.l"
+#line 33 "micro.l"
 { return PARENIZQUIERDO; }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 31 "micro.l"
+#line 34 "micro.l"
 { return PARENDERECHO; }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 33 "micro.l"
+#line 36 "micro.l"
 ;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 35 "micro.l"
+#line 38 "micro.l"
 {
     printf("Error lexico en linea %d: caracter no reconocido '%s'\n",
            yylineno, yytext);
@@ -742,10 +745,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 42 "micro.l"
+#line 45 "micro.l"
 ECHO;
 	YY_BREAK
-#line 749 "lex.yy.c"
+#line 752 "lex.yy.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
@@ -1629,4 +1632,4 @@ int main()
 	return 0;
 	}
 #endif
-#line 42 "micro.l"
+#line 45 "micro.l"

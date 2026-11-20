@@ -80,12 +80,13 @@ typedef union YYSTYPE
 #line 25 "micro.y"
 
     char *cadena;
+    int num;
     char operador;
 
 
 
 /* Line 1676 of yacc.c  */
-#line 89 "y.tab.h"
+#line 90 "y.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

@@ -24,6 +24,7 @@ char *GenInfijo(char *izq, char operador, char *der);
 
 %union {
     char *cadena;
+    int num;
     char operador;
 }
 
@@ -33,7 +34,7 @@ char *GenInfijo(char *izq, char operador, char *der);
 //%token ID CONSTANTE
 //Con cadena le decimos a Bison que el token ID tiene asociado un texto.
 %token <cadena> ID
-%token <cadena> CONSTANTE
+%token <num> CONSTANTE
 
 %token ASIGNACION
 %token PUNTOYCOMA
@@ -88,16 +89,18 @@ expresion:
 primaria:
       identificador
       {
-        $$ = $1;  /* primaria toma el valor del identificador */
+          $$ = $1;
       }
     | CONSTANTE
-    {
-        $$ = $1;  /* primaria toma el valor de la constante */
-    }
+      {
+          char *texto = malloc(20);
+          sprintf(texto, "%d", $1);
+          $$ = texto;
+      }
     | PARENIZQUIERDO expresion PARENDERECHO
-    {
-          $$ = $2;  /* primaria toma el resultado de la expresion */
-    }
+      {
+          $$ = $2;
+      }
 ;
 
 operadorAditivo:
@@ -128,7 +131,7 @@ int main(void)
     int resultado = yyparse();
 
     if(resultado == 0 && !hay_error_lexico)
-        printf("Programa correcto: analisis lexico y sintactico exitoso\n");
+        printf("Programa correcto: analisis lexico,sintactico y semantico exitoso\n");
 
     return resultado;
 }

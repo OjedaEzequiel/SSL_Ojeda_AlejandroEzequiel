@@ -162,12 +162,13 @@ typedef union YYSTYPE
 #line 25 "micro.y"
 
     char *cadena;
+    int num;
     char operador;
 
 
 
 /* Line 214 of yacc.c  */
-#line 171 "y.tab.c"
+#line 172 "y.tab.c"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
@@ -179,7 +180,7 @@ typedef union YYSTYPE
 
 
 /* Line 264 of yacc.c  */
-#line 183 "y.tab.c"
+#line 184 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -469,8 +470,8 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    53,    53,    59,    68,    69,    73,    74,    75,    78,
-      82,    89,    93,    97,   104,   108,   115,   116,   120,   121
+       0,    54,    54,    60,    69,    70,    74,    75,    76,    79,
+      83,    90,    94,   100,   107,   111,   118,   119,   123,   124
 };
 #endif
 
@@ -1387,7 +1388,7 @@ yyreduce:
         case 3:
 
 /* Line 1455 of yacc.c  */
-#line 60 "micro.y"
+#line 61 "micro.y"
     {
         procesar_id((yyvsp[(1) - (1)].cadena)); //Es la accion semantica. La gramatica reconoce un ID y  llama a la rutina.
         (yyval.cadena) = (yyvsp[(1) - (1)].cadena); //Significa El resultado de identificador será el texto que vino en ID
@@ -1398,7 +1399,7 @@ yyreduce:
   case 9:
 
 /* Line 1455 of yacc.c  */
-#line 79 "micro.y"
+#line 80 "micro.y"
     {
           (yyval.cadena) = (yyvsp[(1) - (1)].cadena);
       }
@@ -1407,7 +1408,7 @@ yyreduce:
   case 10:
 
 /* Line 1455 of yacc.c  */
-#line 83 "micro.y"
+#line 84 "micro.y"
     {
           (yyval.cadena) = GenInfijo((yyvsp[(1) - (3)].cadena), (yyvsp[(2) - (3)].operador), (yyvsp[(3) - (3)].cadena));
       }
@@ -1416,34 +1417,36 @@ yyreduce:
   case 11:
 
 /* Line 1455 of yacc.c  */
-#line 90 "micro.y"
+#line 91 "micro.y"
     {
-        (yyval.cadena) = (yyvsp[(1) - (1)].cadena);  /* primaria toma el valor del identificador */
+          (yyval.cadena) = (yyvsp[(1) - (1)].cadena);
       }
     break;
 
   case 12:
 
 /* Line 1455 of yacc.c  */
-#line 94 "micro.y"
+#line 95 "micro.y"
     {
-        (yyval.cadena) = (yyvsp[(1) - (1)].cadena);  /* primaria toma el valor de la constante */
-    }
+          char *texto = malloc(20);
+          sprintf(texto, "%d", (yyvsp[(1) - (1)].num));
+          (yyval.cadena) = texto;
+      }
     break;
 
   case 13:
 
 /* Line 1455 of yacc.c  */
-#line 98 "micro.y"
+#line 101 "micro.y"
     {
-          (yyval.cadena) = (yyvsp[(2) - (3)].cadena);  /* primaria toma el resultado de la expresion */
-    }
+          (yyval.cadena) = (yyvsp[(2) - (3)].cadena);
+      }
     break;
 
   case 14:
 
 /* Line 1455 of yacc.c  */
-#line 105 "micro.y"
+#line 108 "micro.y"
     {
           (yyval.operador) = '+';
       }
@@ -1452,7 +1455,7 @@ yyreduce:
   case 15:
 
 /* Line 1455 of yacc.c  */
-#line 109 "micro.y"
+#line 112 "micro.y"
     {
           (yyval.operador) = '-';
       }
@@ -1461,7 +1464,7 @@ yyreduce:
 
 
 /* Line 1455 of yacc.c  */
-#line 1465 "y.tab.c"
+#line 1468 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1673,7 +1676,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 124 "micro.y"
+#line 127 "micro.y"
 
 
 int main(void)
@@ -1681,7 +1684,7 @@ int main(void)
     int resultado = yyparse();
 
     if(resultado == 0 && !hay_error_lexico)
-        printf("Programa correcto: analisis lexico y sintactico exitoso\n");
+        printf("Programa correcto: analisis lexico,sintactico y semantico exitoso\n");
 
     return resultado;
 }
