@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/USUARIO/Desktop/Cursada 2026/Sintaxis y Semántica de los Lenguajes/Segundo cuatrimestre/TpFlexYBison",
-      "program": "c:/Users/USUARIO/Desktop/Cursada 2026/Sintaxis y Semántica de los Lenguajes/Segundo cuatrimestre/TpFlexYBison/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
